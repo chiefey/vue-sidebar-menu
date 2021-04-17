@@ -5,29 +5,6 @@
   >
     <div class="demo">
       <div class="container">
-        <h1>
-          vue-sidebar-menu
-          <a
-            style="color: #000;text-transform: uppercase;font-size: 14px;font-weight: 400;"
-            href="https://github.com/yaminncco/vue-sidebar-menu"
-          >
-            Github
-          </a>
-        </h1>
-        <p>A vue.js sidebar menu component</p>
-        <div>
-          Select theme:
-          <select v-model="selectedTheme">
-            <option
-              v-for="(theme, index) in themes"
-              :key="index"
-              :value="theme.input"
-            >
-              {{ theme.name }}
-            </option>
-          </select>
-        </div>
-        <hr style="margin: 50px 0px;border: 1px solid #e3e3e3;">
         <router-view />
       </div>
       <sidebar-menu
@@ -59,117 +36,155 @@ export default {
       menu: [
         {
           header: true,
-          title: 'Getting Started',
+          title: 'Title Header',
           hiddenOnCollapse: true
         },
         {
           href: '/',
-          title: 'Installation',
+          title: 'Static Item 1',
           icon: 'fa fa-download'
         },
         {
-          href: '/basic-usage',
-          title: 'Basic Usage',
+          href: '/about',
+          title: 'Static Item 2',
           icon: 'fa fa-code'
         },
         {
-          header: true,
-          title: 'Usage',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/props',
-          title: 'Props',
-          icon: 'fa fa-cogs'
-        },
-        {
-          href: '/events',
-          title: 'Events',
-          icon: 'fa fa-bell'
-        },
-        {
-          href: '/styling',
-          title: 'Styling',
-          icon: 'fa fa-palette'
-        },
-        {
-          component: separator
-        },
-        {
-          header: true,
-          title: 'Example',
-          hiddenOnCollapse: true
-        },
-        {
-          href: '/disabled',
-          title: 'Disabled page',
-          icon: 'fa fa-lock',
-          disabled: true
-        },
-        {
-          title: 'Badge',
-          icon: 'fa fa-cog',
-          badge: {
-            text: 'new',
-            class: 'vsm--badge_default'
-          }
-        },
-        {
-          href: '/page',
-          title: 'Dropdown Page',
+          href: '/page1',
+          title: 'Dropdown 1',
           icon: 'fa fa-list-ul',
           child: [
             {
-              href: '/page/sub-page-1',
+              href: '/page1/sub-page-1',
               title: 'Sub Page 01',
               icon: 'fa fa-file-alt'
             },
             {
-              href: '/page/sub-page-2',
+              href: '/page1/sub-page-2',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-3',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-4',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-5',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-6',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-7',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-8',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-9',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-10',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-11',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/dashboard',
+              title: 'Dashboard',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page1/sub-page-13',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            }
+          ]
+        },
+        {
+          href: '/page2',
+          title: 'Dropdown 2',
+          icon: 'fa fa-list-ul',
+          child: [
+            {
+              href: '/page2/sub-page-1',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page2/sub-page-2',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+             {
+              href: '/page2/sub-page-3',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page2/sub-page-4',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+             {
+              href: '/page2/sub-page-5',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page2/sub-page-6',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
+            },
+             {
+              href: '/page2/sub-page-7',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
+            },
+            {
+              href: '/page2/sub-page-8',
               title: 'Sub Page 02',
               icon: 'fa fa-file-alt'
             }
           ]
         },
         {
-          title: 'Multiple Level',
-          icon: 'fa fa-list-alt',
+          href: '/page3',
+          title: 'Dropdown 3',
+          icon: 'fa fa-list-ul',
           child: [
             {
-              title: 'page'
+              href: '/page3/sub-page-1',
+              title: 'Sub Page 01',
+              icon: 'fa fa-file-alt'
             },
             {
-              title: 'Level 2 ',
-              child: [
-                {
-                  title: 'page'
-                },
-                {
-                  title: 'Page'
-                }
-              ]
-            },
-            {
-              title: 'Page'
-            },
-            {
-              title: 'Another Level 2',
-              child: [
-                {
-                  title: 'Level 3',
-                  child: [
-                    {
-                      title: 'Page'
-                    },
-                    {
-                      title: 'Page'
-                    }
-                  ]
-                }
-              ]
+              href: '/page3/sub-page-2',
+              title: 'Sub Page 02',
+              icon: 'fa fa-file-alt'
             }
           ]
-        }
+        },
       ],
       collapsed: false,
       themes: [
@@ -182,7 +197,7 @@ export default {
           input: 'white-theme'
         }
       ],
-      selectedTheme: 'white-theme',
+      selectedTheme: 'Default theme',
       isOnMobile: false
     }
   },
@@ -253,7 +268,7 @@ body {
 }
 
 .demo {
-  padding: 50px;
+  padding: 20px;
 }
 
 .container {

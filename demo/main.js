@@ -8,6 +8,7 @@ import BasicUsage from './components/BasicUsage.vue'
 import Props from './components/Props.vue'
 import Events from './components/Events.vue'
 import Styling from './components/Styling.vue'
+import Dashboard from './components/Dashboard.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueSidebarMenu)
@@ -38,6 +39,11 @@ const router = new VueRouter({
       path: '/styling',
       name: 'Styling',
       component: Styling
+    },
+    {
+      path: '/page1/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
     }
   ]
 })
